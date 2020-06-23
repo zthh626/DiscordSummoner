@@ -41,10 +41,10 @@ client.on('message', message => {
             tts: true
         });
         counter ++;
-        if(counter > 4){
+        if(counter > 5){
             clearInterval(interval);
         }
-    }, 6000);
+    }, 1500);
 
     return;
 });
