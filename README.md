@@ -4,16 +4,14 @@ Discord bot that "call" users by mentioning them in channel
 
 ## How to run
 
-Create a config.json file in the same directory with this structure:
+Create a .env file in the same directory with this structure:
 ```
-{
-    "token": "",
-    "prefix": "!summon ",
-    "the_boys": {
-        "user_id": "",
-        ...
-    }
-}
+TOKEN="TOKEN"
+THE_BOYS="name.user_id name2.user_id2 ..."
 ```
 
-Then use `node .` in this directory
+Then use `heroku local` or `node .` in this directory
+
+## Discord Server
+
+In a channel, type `!summon @user` or `!summon all the boys`

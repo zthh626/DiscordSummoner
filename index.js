@@ -1,6 +1,15 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const { prefix, token, the_boys } = require('./config.json');
+const prefix = "!summon "
+
+const token = process.env.TOKEN
+let tmp = process.env.THE_BOYS.split(' ');
+const the_boys = [];
+
+for(let i = 0; i<tmp.length; i++){
+    the_boys.push(tmp[i].split('.')[1]);
+}
+
 
 client.on('message', message => {
     if(!message.content.startsWith(prefix) || message.author.bot) return;
@@ -15,8 +24,8 @@ client.on('message', message => {
     let user_ids = '';
 
     if(message.content === prefix + 'all the boys'){
-        for(const boy in the_boys){
-            user_ids += '<@' + the_boys[boy] + '> ';
+        for(let i = 0; i < the_boys.length; i++){
+            user_ids += '<@' + the_boys[i] + '> ';
         }
     }else{
         for(let i = 0; i < users.length; i++){

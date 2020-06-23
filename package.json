@@ -1,4 +1,11 @@
 {
+  "name": "summoner",
+  "description": "Discord bot that 'call' users by mentioning them in channel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "discord.js": "^12.2.0"
   }
