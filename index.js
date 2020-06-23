@@ -15,6 +15,7 @@ client.on('message', message => {
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
     if (message.content != prefix + 'all the boys' && !message.mentions.users.size) {
+        console.log('No user mentioned');
         return message.reply('please mention a user');
     }
 
@@ -35,6 +36,8 @@ client.on('message', message => {
 
     mes += user_ids;
     let counter = 1;
+
+    console.log(mes);
 
     let interval = setInterval(function(){ 
         message.channel.send(mes, {
